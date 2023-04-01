@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "fastapi-template"
+version = "0.1.0"
+description = "FastAPI template that can be used as a starting point for other projects. It assumes the use of PostgreSQL, Alembic, SQLAlchemy, and Pydantic."
+authors = ["daguenette <daguenette.data@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.95.0"
+uvicorn = "^0.21.1"
+sqlalchemy = "^2.0.7"
+psycopg2-binary = "^2.9.5"
+pydantic = {extras = ["dotenv"], version = "^1.10.7"}
+alembic = "^1.10.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "app.main:start"
