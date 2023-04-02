@@ -20,7 +20,7 @@ if config.config_file_name is not None:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 from app.database.base import Base
-from app.api.ressources.taxes.models import Taxes
+from app.api.resources.resource1.models import Resource1
 
 target_metadata = Base.metadata
 

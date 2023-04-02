@@ -14,18 +14,22 @@ app/
 │   │   ├── __init__.py
 │   │   ├── base.py
 │   │   ├── resources/
+|   |   |   ├── __init__.py
 │   │   │   ├── resource1/         # Replaced with taxes as an example in the project directories
+|   |   |   |   ├── __init__.py
 │   │   │   │   ├── models.py
 │   │   │   │   ├── schemas.py
 │   │   │   │   ├── routes.py
 │   │   │   │   └── operations.py
-│   │   └── auth/
-│   │       └── utils.py
+│   │   └── auth/                  # COMING SOON
+|   |       ├── __init__.py
+│   │       └── utils.py           # COMING SOON
 │   ├── database/
 │   │   ├── __init__.py
 │   │   └── base.py
-│   └── helper_functions/
-│       └── validations.py
+│   └── helper_functions/          # COMING SOON
+|       ├── __init__.py
+│       └── validations.py         # COMING SOON
 pyproject.toml
 README.md
 .gitignore
@@ -33,7 +37,7 @@ README.md
 
 ## Getting Started
 
-1. Install required dependencies & enter virtual environment:
+1. Enter virtual environment & install dependencies:
 
 ```bash
 poetry shell
@@ -50,6 +54,7 @@ DATABASE_PASSWORD="<your_db_password>"
 DATABASE_HOST="<your_db_host>"
 DATABASE_NAME="<your_db_name>"
 DATABASE_PORT="<your_db_port>"
+API_PORT="<your_api_port>"
 ```
 
 3. Run the application:
