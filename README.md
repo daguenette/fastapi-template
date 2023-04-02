@@ -14,7 +14,7 @@ app/
 │   │   ├── __init__.py
 │   │   ├── base.py
 │   │   ├── resources/
-│   │   │   ├── resource1/
+│   │   │   ├── resource1/         # Replaced with taxes as an example in the project directories
 │   │   │   │   ├── models.py
 │   │   │   │   ├── schemas.py
 │   │   │   │   ├── routes.py
@@ -89,8 +89,8 @@ target_metadata = None
 
 ```python
 from app.database.base import Base
-from app.api.ressources.ressource1.models import <classname_of_your_model>
 # add all new ressources models here
+from app.api.ressources.ressource1.models import <classname_of_your_model>
 
 target_metadata = Base.metadata
 ```
