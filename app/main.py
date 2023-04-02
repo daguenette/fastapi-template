@@ -14,7 +14,7 @@ from app.config import settings
 
 ## -- Init FastAPI & Add Routes -- ##
 
-app = FastAPI()
+app = FastAPI() # To remove /docs use add (docs_url=None, redoc_url=None)
 app.include_router(api_router)
 
 ## -- Start Server Function -- ##

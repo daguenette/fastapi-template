@@ -80,13 +80,14 @@ This will create an alembic directory in your project with necessary configurati
 
 2. Configure Alembic
 
-Open alembic.ini in the project root and update the sqlalchemy.url to match your database URL. Alternatively, you can use an environment variable to load the database URL. 
+Open `alembic.ini` in the project root and update the `sqlalchemy.url` to match your database URL. Alternatively, you can use an environment variable to load the database URL. 
 
 ```bash
 sqlalchemy.url = ${DATABASE_URL}
 ```
 
-Next, open alembic/env.py. Import your SQLAlchemy Base and engine objects from your project, and replace the following lines:
+Next, open **alembic/env.py**.
+Import your SQLAlchemy Base and engine objects from your project, and replace the following lines:
 
 ```python
 target_metadata = None
@@ -107,11 +108,11 @@ To create a new migration, run:
 ```bash
 poetry run alembic revision --autogenerate -m "Description of the migration"
 ```
-Replace "Description of the migration" with a brief description of the changes made. Alembic will generate a migration script in the alembic/versions directory.
+Replace "Description of the migration" with a brief description of the changes made. Alembic will generate a migration script in the **alembic/versions** directory.
 
 4. Review the generated migration
 
-Before applying the migration, review the generated migration script in alembic/versions. Make sure that the upgrade() and downgrade() functions correctly represent the desired changes to your database schema.
+Before applying the migration, review the generated migration script in **alembic/versions**. Make sure that the `upgrade()` and `downgrade()` functions correctly represent the desired changes to your database schema.
 
 5. Apply the migration
 
